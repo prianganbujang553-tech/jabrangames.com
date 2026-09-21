@@ -1,0 +1,412 @@
+/* =========================================================
+   AlishaGames Main Stylesheet (style.css)
+   ========================================================= */
+
+/* Reset & Basic Base Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #030d06; /* Dark forest green background */
+  color: #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-h-screen: 100vh;
+}
+
+/* App Container (Mobile Mockup Layout) */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: #05140a;
+  min-height: 100vh;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
+/* Header & Logo */
+.app-header {
+  background-color: #021a0c;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid #0d381a;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00e676, #00897b);
+  color: #000;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid #69f0ae;
+}
+
+.brand-info h1 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.brand-info h1 span {
+  color: #00e676; /* Neon Green Accent */
+}
+
+.brand-info p {
+  font-size: 10px;
+  color: #a0aec0;
+}
+
+/* Download Button */
+.btn-download {
+  background: linear-gradient(180deg, #00e676 0%, #00c853 100%);
+  color: #000000;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 230, 118, 0.3);
+  transition: all 0.2s ease;
+}
+
+.btn-download:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* Announcement Banner / Marquee */
+.marquee-container {
+  background-color: #020c06;
+  border-bottom: 1px solid #0a2913;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #00e676;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Hero Carousel */
+.hero-banner {
+  padding: 12px;
+}
+
+.hero-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #00e67655;
+  background-color: #092011;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Action Menu / Quick Badges */
+.nav-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0 12px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  background: linear-gradient(145deg, #0a2112, #05140b);
+  border: 1px solid #133a1e;
+  color: #00e676;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+  background: #0f331c;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #ffffff;
+  padding: 14px 12px 10px 12px;
+  border-left: 4px solid #00e676;
+  margin-left: 12px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Grid Cards (Terbaru & Rekomendasi) */
+.recom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0 12px;
+}
+
+.card-item {
+  background: linear-gradient(145deg, #091f11, #041209);
+  border: 1px solid #0e331b;
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-2px);
+  border-color: #00e676;
+}
+
+.card-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card-item .item-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Search Bar */
+.search-box {
+  padding: 0 12px;
+  margin-top: 16px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  background-color: #04180c;
+  border: 1px solid #0e3b1c;
+  border-radius: 12px;
+  padding: 10px 12px 10px 36px;
+  font-size: 12px;
+  color: #ffffff;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #4a5568;
+}
+
+.search-input:focus {
+  border-color: #00e676;
+}
+
+.search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4a5568;
+  font-size: 12px;
+}
+
+/* Category Filter Tabs */
+.category-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.category-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  background-color: #061c0e;
+  border: 1px solid #0d381a;
+  color: #a0aec0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: linear-gradient(180deg, #00e676 0%, #00c853 100%);
+  color: #000000;
+  border: none;
+}
+
+/* Hot Games Grid (4 Columns Layout) */
+.hot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.hot-card {
+  background: linear-gradient(145deg, #071a0e, #030e07);
+  border: 1px solid #0a2d16;
+  border-radius: 14px;
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+}
+
+.hot-card img {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.hot-card .item-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #cbd5e0;
+  margin-top: 6px;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.like-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: #4a5568;
+  font-size: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.like-btn.liked {
+  color: #e53e3e;
+}
+
+/* Statistics Counter Box */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 16px 12px 0 12px;
+}
+
+.stat-box {
+  background: linear-gradient(145deg, #081d0f, #030f07);
+  border: 1px solid #0f3d1d;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 22px;
+  font-weight: 900;
+  color: #00e676;
+}
+
+.stat-label {
+  font-size: 9px;
+  color: #718096;
+  font-weight: 800;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Footer & About Section */
+.footer-section {
+  background-color: #020a04;
+  border-top: 1px solid #0a2a13;
+  padding: 20px 16px;
+  margin-top: 24px;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.footer-section p {
+  font-size: 11px;
+  color: #a0aec0;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #082110;
+  border: 1px solid #0f401f;
+  color: #00e676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #00e676;
+  color: #000000;
+}
